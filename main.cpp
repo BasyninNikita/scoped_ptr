@@ -28,5 +28,10 @@ public:
 		delete ptr;
 		ptr=oth;
 	}
+	T * get()const{
+		return ptr;
+	}
+	scoped_ptr & operator=(scoped_ptr const &) = delete;    
+   	scoped_ptr(scoped_ptr const &) = delete;
 };
     
